@@ -7,7 +7,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: true,
         title: Text("Login Page"),
       ),
       body: SafeArea(
@@ -22,7 +22,9 @@ class LoginPage extends StatelessWidget {
                   labelText: "Username",
                 ),
               ),
-              SizedBox(height: 16.0,),
+              SizedBox(
+                height: 16.0,
+              ),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -31,9 +33,9 @@ class LoginPage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/register');
+                  Navigator.pushNamed(context, '/welcome');
                 },
-                child: Text("Register"),
+                child: Text("Login Here"),
               ),
             ],
           ),

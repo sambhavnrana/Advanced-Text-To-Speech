@@ -11,23 +11,51 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Register Page"),
-        ),
-        body: SafeArea(
+      appBar: AppBar(
+        leading: BackButton(),
+        automaticallyImplyLeading: true,
+        title: const Text("Register Page"),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(child: const Text("Main Register Page"),),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: "EmailID",
+                ),
+              ),
+              SizedBox(
+                height: 16.0,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: "Username",
+                ),
+              ),
+              SizedBox(
+                height: 16.0,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: "Password",
+                ),
+              ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/login');
+                  Navigator.pushReplacementNamed(context, '/welcome');
                 },
-                child: const Text("Login"),
+                child: const Text("Register Here"),
               ),
             ],
           ),
-        )
+        ),
+      ),
     );
   }
 }
