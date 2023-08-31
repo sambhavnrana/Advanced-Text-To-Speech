@@ -7,7 +7,6 @@ class welcome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
         title: Text("Logged In Successfully"),
       ),
       body: Text("Welcome "),
