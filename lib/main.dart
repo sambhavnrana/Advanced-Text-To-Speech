@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tts/Pages/Auth/login_page.dart';
 import 'package:tts/Pages/Auth/register_page.dart';
 import 'package:tts/Pages/Auth/homepage.dart';
-import 'package:tts/Pages/Auth/welcome.dart';
+import 'package:tts/Pages/Auth/registered.dart';
+import 'package:tts/Pages/Auth/logged_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +34,8 @@ class MyHomePage extends StatelessWidget {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
         '/home': (context) => const HomePage(),
-        '/welcome': (context) => const welcome(),
+        '/registered': (context) => const Registered(),
+        '/loggedin': (context) => const LoggedIn(),
       },
     );
   }
