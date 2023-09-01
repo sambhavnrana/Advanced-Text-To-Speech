@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
               Column(
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(15),
                     width: Responsiveness.screenWidth(context) * 0.5,
                     child: const Image(
                       image: NetworkImage(
@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.w600,
                                 color: Color.fromARGB(255, 26, 19, 19))),
-                        const Text('Login to your Account',
+                        const Text('Create your Account',
                             style: TextStyle(
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -118,15 +118,19 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/welcome');
+                      Navigator.pushNamed(context, '/loggedin');
                     },
-                    child: const Text("Login"),
                     style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0))),
                         backgroundColor: MaterialStateProperty.all<Color>(
                             ColorSchemes.orangeC),
                         fixedSize: MaterialStateProperty.all<Size>(Size(
                             Responsiveness.screenWidth(context) * 0.85,
                             Responsiveness.screenHeight(context) * 0.05))),
+                    child: const Text("Login"),
                   ),
                   const SizedBox(
                     height: 12.0,
@@ -134,12 +138,16 @@ class _LoginPageState extends State<LoginPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Already have an account ? '),
+                      const Text(
+                        'Already have an account ? ',
+                        style: TextStyle(fontSize: 14),
+                      ),
                       GestureDetector(
                         onTap: () => Navigator.pushNamed(context, '/register'),
                         child: const Text(
                           'Register',
                           style: TextStyle(
+                              decoration: TextDecoration.underline,
                               color: ColorSchemes.orangeC,
                               fontWeight: FontWeight.bold),
                         ),

@@ -89,11 +89,25 @@ class _RegisterPageState extends State<RegisterPage> {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        Row(children: <Widget>[
-                          Expanded(child: Divider()),
-                          Text("OR"),
-                          Expanded(child: Divider()),
-                        ]),
+                        const Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Divider(
+                                color: ColorSchemes.orangeC,
+                                thickness: 1.0,
+                              ),
+                            ),
+                            Text(
+                              "   or   ",
+                              style: TextStyle(fontSize: 13),
+                            ),
+                            Expanded(
+                                child: Divider(
+                              color: ColorSchemes.orangeC,
+                              thickness: 1.0,
+                            )),
+                          ],
+                        ),
                         const SizedBox(
                           height: 20.0,
                         ),
@@ -120,10 +134,14 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/welcome');
+                      Navigator.pushNamed(context, '/registered');
                     },
-                    child: Text("Register"),
+                    child: const Text("Register"),
                     style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0))),
                         backgroundColor: MaterialStateProperty.all<Color>(
                             ColorSchemes.orangeC),
                         fixedSize: MaterialStateProperty.all<Size>(Size(
@@ -136,12 +154,16 @@ class _RegisterPageState extends State<RegisterPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Already have an account ? '),
+                      const Text(
+                        'Already have an account ? ',
+                        style: TextStyle(fontSize: 14),
+                      ),
                       GestureDetector(
                         onTap: () => Navigator.pushNamed(context, '/login'),
-                        child: Text(
+                        child: const Text(
                           'Login',
                           style: TextStyle(
+                              decoration: TextDecoration.underline,
                               color: ColorSchemes.orangeC,
                               fontWeight: FontWeight.bold),
                         ),
