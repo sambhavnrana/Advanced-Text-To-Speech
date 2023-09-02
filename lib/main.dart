@@ -4,6 +4,8 @@ import 'package:tts/Pages/Auth/register_page.dart';
 import 'package:tts/Pages/Auth/homepage.dart';
 import 'package:tts/Pages/Auth/registered.dart';
 import 'package:tts/Pages/Auth/logged_in.dart';
+import 'package:tts/Pages/Auth/text_summarizer.dart';
+import 'package:tts/Pages/Auth/text_to_speech.dart';  
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +38,8 @@ class MyHomePage extends StatelessWidget {
         '/home': (context) => const HomePage(),
         '/registered': (context) => const Registered(),
         '/loggedin': (context) => const LoggedIn(),
+        '/textsummarizer': (context) => const TextSummarizer(),
+        '/texttospeech': (context) => const TextToSpeech(),
       },
     );
   }
