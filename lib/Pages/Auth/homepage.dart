@@ -14,7 +14,8 @@ class _HomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Center(child: Text("Text to Speech")),
+          backgroundColor: ColorSchemes.orangeC,
+          title: const Text("Text to Speech"), // logout button
         ),
         body: SafeArea(
           child: Column(
@@ -33,11 +34,11 @@ class _HomePage extends State<HomePage> {
                   const Center(
                     child: Padding(
                       padding: EdgeInsets.all(15.0),
-                      child: Text("Welcome to Text to Speech",
+                      child: Text("Welcome to the App        ",
                           style: TextStyle(
                               fontSize: 20.0,
                               fontWeight: FontWeight.w600,
-                              color: Color.fromARGB(255, 26, 19, 19))),
+                              color: ColorSchemes.blackC)),
                     ),
                   ),
                   SizedBox(
@@ -51,12 +52,12 @@ class _HomePage extends State<HomePage> {
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 ColorSchemes.orangeC),
                             fixedSize: MaterialStateProperty.all<Size>(Size(
-                                Responsiveness.screenWidth(context) * 0.30,
+                                Responsiveness.screenWidth(context) * 0.85,
                                 Responsiveness.screenHeight(context) * 0.06))),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/register');
+                          Navigator.pushNamed(context, '/textsummarizer');
                         },
-                        child: const Text("Register"),
+                        child: const Text("Text Summarizer"),
                       ),
                       SizedBox(
                         height: Responsiveness.screenHeight(context) * 0.03,
@@ -66,12 +67,12 @@ class _HomePage extends State<HomePage> {
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 ColorSchemes.orangeC),
                             fixedSize: MaterialStateProperty.all<Size>(Size(
-                                Responsiveness.screenWidth(context) * 0.30,
+                                Responsiveness.screenWidth(context) * 0.85,
                                 Responsiveness.screenHeight(context) * 0.06))),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/login');
+                          Navigator.pushNamed(context, '/texttospeech');
                         },
-                        child: const Text("Login"),
+                        child: const Text("Text to Speech"),
                       )
                     ],
                   )

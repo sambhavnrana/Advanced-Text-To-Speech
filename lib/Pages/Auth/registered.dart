@@ -1,56 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:tts/GlobalState/colorscheme.dart';
-// import 'package:tts/GlobalState/responsiveUtils.dart';
-
-// class Registered extends StatelessWidget {
-//   const Registered({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: SafeArea(
-//         child: Expanded(
-//           child: Column(
-//             children: [
-//               Container(
-//                 padding: const EdgeInsets.all(15),
-//                 width: Responsiveness.screenWidth(context) * 0.5,
-//                 child: const Image(
-//                   image: NetworkImage(
-//                       'https://cdn3d.iconscout.com/3d/premium/thumb/computer-password-4416190-3664012.png?f=webp'),
-//                 ),
-//               ),
-//               Container(
-//                 child: const Column(
-//                   children: [
-//                     Text(
-//                       " Registered Successfully ",
-//                       style: TextStyle(
-//                           fontSize: 20,
-//                           fontWeight: FontWeight.bold,
-//                           color: ColorSchemes.orangeC),
-//                     ),
-//                     SizedBox(
-//                       height: 20,
-//                     ),
-//                     Text(
-//                       'Please Login',
-//                       style: TextStyle(
-//                           fontSize: 20,
-//                           fontWeight: FontWeight.bold,
-//                           color: ColorSchemes.blackC),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:tts/GlobalState/colorscheme.dart';
 import 'package:tts/GlobalState/responsiveUtils.dart';
@@ -68,11 +15,11 @@ class Registered extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    padding: const EdgeInsets.fromLTRB(15, 40, 15, 25),
-                    width: Responsiveness.screenWidth(context) * 0.5,
+                    padding: const EdgeInsets.all(5),
+                    width: Responsiveness.screenWidth(context) * 0.8,
                     child: const Image(
                       image: NetworkImage(
-                          'https://cdn3d.iconscout.com/3d/premium/thumb/user-verification-7257098-5915194.png?f=webp'),
+                          'https://media3.giphy.com/media/ggtpYV17RP9lTbc542/200w.webp?cid=ecf05e474d866i3fyisf1k8a5rw79pneaza40p1xic2nvlpp&ep=v1_gifs_search&rid=200w.webp&ct=g'),
                     ),
                   ),
                   Container(
