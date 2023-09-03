@@ -15,16 +15,16 @@ class _HomePage extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: ColorSchemes.orangeC,
-          title: const Text("Text to Speech"), // logout button
+          title: const Text("MAIN APP"),
         ),
         body: SafeArea(
           child: Column(
             children: [
               Image(
-                width: Responsiveness.screenWidth(context) * 0.9,
+                width: Responsiveness.screenWidth(context) * 0.5,
                 fit: BoxFit.cover,
                 image: const NetworkImage(
-                    'https://cdn3d.iconscout.com/3d/premium/thumb/text-to-speech-9200561-7526305.png'),
+                    'https://cdn-icons-png.flaticon.com/128/10509/10509470.png'),
               ),
               SizedBox(
                 height: Responsiveness.screenHeight(context) * 0.05,
@@ -34,10 +34,10 @@ class _HomePage extends State<HomePage> {
                   const Center(
                     child: Padding(
                       padding: EdgeInsets.all(15.0),
-                      child: Text("Welcome to the App        ",
+                      child: Text("Welcome to the App ",
                           style: TextStyle(
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.bold,
                               color: ColorSchemes.blackC)),
                     ),
                   ),
@@ -73,7 +73,22 @@ class _HomePage extends State<HomePage> {
                           Navigator.pushNamed(context, '/texttospeech');
                         },
                         child: const Text("Text to Speech"),
-                      )
+                      ),
+                      SizedBox(
+                        height: Responsiveness.screenHeight(context) * 0.03,
+                      ),
+                      ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                ColorSchemes.orangeC),
+                            fixedSize: MaterialStateProperty.all<Size>(Size(
+                                Responsiveness.screenWidth(context) * 0.85,
+                                Responsiveness.screenHeight(context) * 0.06))),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/speechtotext');
+                        },
+                        child: const Text("Speech to Text"),
+                      ),
                     ],
                   )
                 ],

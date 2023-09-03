@@ -29,7 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             style: TextStyle(
                                 fontSize: 32.0,
                                 fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 26, 19, 19))),
+                                color: ColorSchemes.blackC)),
                       ],
                     ),
                   ),
@@ -44,12 +44,12 @@ class _RegisterPageState extends State<RegisterPage> {
                             style: TextStyle(
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.w600,
-                                color: Color.fromARGB(255, 26, 19, 19))),
+                                color: ColorSchemes.blackC)),
                         const Text('Create an Account',
                             style: TextStyle(
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
-                                color: Color.fromARGB(255, 26, 19, 19))),
+                                color: ColorSchemes.blackC)),
                         const SizedBox(
                           height: 15.0,
                         ),
@@ -80,11 +80,11 @@ class _RegisterPageState extends State<RegisterPage> {
                               labelStyle: const TextStyle(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w300,
-                                  color: Color.fromARGB(255, 26, 19, 19))),
+                                  color: ColorSchemes.blackC)),
                           style: const TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
-                              color: Color.fromARGB(255, 26, 19, 19)),
+                              color: ColorSchemes.blackC),
                         ),
                         const SizedBox(
                           height: 20.0,
@@ -120,11 +120,11 @@ class _RegisterPageState extends State<RegisterPage> {
                               labelStyle: const TextStyle(
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w300,
-                                  color: Color.fromARGB(255, 26, 19, 19))),
+                                  color: ColorSchemes.blackC)),
                           style: const TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
-                              color: Color.fromARGB(255, 26, 19, 19)),
+                              color: ColorSchemes.blackC),
                         ),
                       ],
                     ),

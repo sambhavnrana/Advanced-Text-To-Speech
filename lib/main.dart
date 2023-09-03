@@ -5,7 +5,8 @@ import 'package:tts/Pages/Auth/homepage.dart';
 import 'package:tts/Pages/Auth/registered.dart';
 import 'package:tts/Pages/Auth/logged_in.dart';
 import 'package:tts/Pages/Auth/text_summarizer.dart';
-import 'package:tts/Pages/Auth/text_to_speech.dart';  
+import 'package:tts/Pages/Auth/text_to_speech.dart';
+import 'package:tts/Pages/Auth/speechtotext.dart ';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
@@ -40,6 +41,7 @@ class MyHomePage extends StatelessWidget {
         '/loggedin': (context) => const LoggedIn(),
         '/textsummarizer': (context) => const TextSummarizer(),
         '/texttospeech': (context) => const TextToSpeech(),
+        '/speechtotext': (context) => const SpeechToText(),
       },
     );
   }
