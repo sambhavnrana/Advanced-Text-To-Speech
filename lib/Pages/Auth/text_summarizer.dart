@@ -56,8 +56,8 @@ class TextSummarizer extends StatelessWidget {
                     Image(
                       width: Responsiveness.screenWidth(context) * 0.5,
                       fit: BoxFit.cover,
-                      image: const NetworkImage(
-                          'https://cdn-icons-png.flaticon.com/128/462/462649.png'),
+                      image:
+                          const AssetImage('assets/images/text-summarizer.png'),
                     ),
                     SizedBox(
                       height: Responsiveness.screenHeight(context) * 0.05,

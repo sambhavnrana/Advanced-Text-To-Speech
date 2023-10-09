@@ -30,8 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: const EdgeInsets.all(15),
                     width: Responsiveness.screenWidth(context) * 0.5,
                     child: const Image(
-                      image: NetworkImage(
-                          'https://cdn3d.iconscout.com/3d/premium/thumb/computer-password-4416190-3664012.png?f=webp'),
+                      image: AssetImage('assets/images/login.webp'),
                     ),
                   ),
                   Container(

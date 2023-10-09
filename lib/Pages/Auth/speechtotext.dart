@@ -1,13 +1,35 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:tts/GlobalState/colorscheme.dart';
 import 'package:tts/GlobalState/responsiveUtils.dart';
+import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class SpeechToText extends StatelessWidget {
-  const SpeechToText({super.key});
+  SpeechToText({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: AvatarGlow(
+          endRadius: 350.0,
+          //animate: isListening,
+          duration: Duration(milliseconds: 1800),
+          glowColor: ColorSchemes.orangeC,
+          repeatPauseDuration: Duration(milliseconds: 100),
+          showTwoGlows: true,
+          child: GestureDetector(
+            onTapDown: (details) {},
+            child: CircleAvatar(
+              backgroundColor: ColorSchemes.orangeC,
+              radius: 35,
+              child: IconButton(
+                icon: const Icon(Icons.mic),
+                onPressed: () {},
+              ),
+            ),
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: ColorSchemes.orangeC,
           title: const Text("Speech to Text"),
@@ -57,8 +79,7 @@ class SpeechToText extends StatelessWidget {
                       Image(
                         width: Responsiveness.screenWidth(context) * 0.3,
                         fit: BoxFit.cover,
-                        image: const NetworkImage(
-                            'https://cdn-icons-png.flaticon.com/128/5089/5089033.png'),
+                        image: const AssetImage('assets/images/stt.png'),
                       ),
                       SizedBox(
                         height: Responsiveness.screenHeight(context) * 0.05,
@@ -73,8 +94,10 @@ class SpeechToText extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      const Text(
-                          'Add placeholder to hold spoken text and mic on option ')
+                      const Text('Hold Button and Start Speaking'),
+                      const SizedBox(
+                        height: 20,
+                      ),
                     ],
                   ),
                 ))));
