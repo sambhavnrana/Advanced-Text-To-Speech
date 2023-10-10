@@ -20,12 +20,11 @@ class _HomePage extends State<HomePage> {
         body: SafeArea(
           child: Column(
             children: [
-              Image(
-                width: Responsiveness.screenWidth(context) * 0.5,
-                fit: BoxFit.cover,
-                image: const NetworkImage(
-                    'https://cdn-icons-png.flaticon.com/128/10509/10509470.png'),
-              ),
+              
+               Image(
+                width: Responsiveness.screenWidth(context) * 0.5, 
+                  fit: BoxFit.cover,
+                  image: const AssetImage('assets/images/welcome.png')),
               SizedBox(
                 height: Responsiveness.screenHeight(context) * 0.05,
               ),

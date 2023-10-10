@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:tts/GlobalState/colorscheme.dart';
 import 'package:tts/GlobalState/responsiveUtils.dart';
 
 class TextToSpeech extends StatelessWidget {
-  const TextToSpeech({super.key});
+  TextToSpeech({super.key});
+
+  final FlutterTts flutterTts = FlutterTts();
+  final TextEditingController textEditingController = TextEditingController();
+
+  speak(String text) async {
+    await flutterTts.setLanguage("en-US");
+    await flutterTts.setPitch(1.5);
+    await flutterTts.speak(text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,8 +67,7 @@ class TextToSpeech extends StatelessWidget {
                       Image(
                         width: Responsiveness.screenWidth(context) * 0.3,
                         fit: BoxFit.cover,
-                        image: const NetworkImage(
-                            'https://cdn-icons-png.flaticon.com/128/10294/10294291.png'),
+                        image: const AssetImage('assets/images/tts.png'),
                       ),
                       SizedBox(
                         height: Responsiveness.screenHeight(context) * 0.05,
@@ -73,8 +82,16 @@ class TextToSpeech extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      const Text(
-                          'Add placeholder to hold spoken text and mic on option '),
+                      TextFormField(
+                        controller: textEditingController,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton(
+                        child: const Icon(Icons.mic, color: Colors.white),
+                        onPressed: () => speak(textEditingController.text),
+                      ),
                     ],
                   ),
                 ))));

@@ -18,8 +18,7 @@ class Registered extends StatelessWidget {
                     padding: const EdgeInsets.all(5),
                     width: Responsiveness.screenWidth(context) * 0.8,
                     child: const Image(
-                      image: NetworkImage(
-                          'https://media3.giphy.com/media/ggtpYV17RP9lTbc542/200w.webp?cid=ecf05e474d866i3fyisf1k8a5rw79pneaza40p1xic2nvlpp&ep=v1_gifs_search&rid=200w.webp&ct=g'),
+                      image: AssetImage('assets/images/welcome-aboard.webp'),
                     ),
                   ),
                   Container(

@@ -136,7 +136,6 @@ class _RegisterPageState extends State<RegisterPage> {
                     onPressed: () {
                       Navigator.pushNamed(context, '/registered');
                     },
-                    child: const Text("Register"),
                     style: ButtonStyle(
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -147,6 +146,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         fixedSize: MaterialStateProperty.all<Size>(Size(
                             Responsiveness.screenWidth(context) * 0.85,
                             Responsiveness.screenHeight(context) * 0.05))),
+                    child: const Text("Register"),
                   ),
                   const SizedBox(
                     height: 12.0,

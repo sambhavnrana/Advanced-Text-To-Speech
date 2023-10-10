@@ -31,8 +31,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Text To Speech',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/register',
+      initialRoute: '/speechtotext',
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
@@ -40,8 +41,8 @@ class MyHomePage extends StatelessWidget {
         '/registered': (context) => const Registered(),
         '/loggedin': (context) => const LoggedIn(),
         '/textsummarizer': (context) => const TextSummarizer(),
-        '/texttospeech': (context) => const TextToSpeech(),
-        '/speechtotext': (context) => const SpeechToText(),
+        '/texttospeech': (context) => TextToSpeech(),
+        '/speechtotext': (context) =>  SpeechToText(),
       },
     );
   }

@@ -18,9 +18,7 @@ class LoggedIn extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(15, 40, 15, 25),
                     width: Responsiveness.screenWidth(context) * 0.5,
                     child: const Image(
-                      image: NetworkImage(
-                          'https://cdn3d.iconscout.com/3d/premium/thumb/user-verification-7257098-5915194.png?f=webp'),
-                    ),
+                        image: AssetImage('assets/images/logged-in.webp')),
                   ),
                   Container(
                     child: const Column(
@@ -38,7 +36,7 @@ class LoggedIn extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   ElevatedButton(
