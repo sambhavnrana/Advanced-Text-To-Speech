@@ -33,7 +33,7 @@ class MyHomePage extends StatelessWidget {
     return MaterialApp(
       title: 'Text To Speech',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/speechtotext',
+      initialRoute: '/home',
       routes: {
         '/login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
@@ -42,7 +42,7 @@ class MyHomePage extends StatelessWidget {
         '/loggedin': (context) => const LoggedIn(),
         '/textsummarizer': (context) => const TextSummarizer(),
         '/texttospeech': (context) => TextToSpeech(),
-        '/speechtotext': (context) =>  SpeechToText(),
+        '/speechtotext': (context) => SpeechToText(),
       },
     );
   }
