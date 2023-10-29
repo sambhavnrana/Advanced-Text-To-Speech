@@ -105,9 +105,9 @@ class _TextSummarizerState extends State<TextSummarizer> {
                 const Text('Enter text to summarize:'),
 
                 TextField(
-                  minLines: 1,
-                  maxLines: 7,
                   controller: inputTextController,
+                  keyboardType: TextInputType.multiline,
+                  maxLines: null, // Allows for dynamic height
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Enter the text you want to get Summarized',
@@ -136,9 +136,9 @@ class _TextSummarizerState extends State<TextSummarizer> {
 
                 const Text('Summarized Text:'),
                 TextField(
-                  minLines: 1,
-                  maxLines: 4,
                   controller: summaryController,
+                   keyboardType: TextInputType.multiline,
+                  maxLines: null, // Allows for dynamic height
                   readOnly: true,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
