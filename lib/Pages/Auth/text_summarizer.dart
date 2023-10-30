@@ -136,8 +136,8 @@ class _TextSummarizerState extends State<TextSummarizer> {
 
                 const Text('Summarized Text:'),
                 TextField(
-                  minLines: 1,
-                  maxLines: 4,
+                  keyboardType: TextInputType.multiline,
+                  maxLines: null, // Allows for dynamic height
                   controller: summaryController,
                   readOnly: true,
                   decoration: const InputDecoration(
