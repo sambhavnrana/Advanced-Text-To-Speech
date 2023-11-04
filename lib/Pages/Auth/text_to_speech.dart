@@ -100,7 +100,7 @@ class TextToSpeech extends StatelessWidget {
                                   Responsiveness.screenHeight(context) *
                                       0.06))),
                           onPressed: () => speak(textEditingController.text),
-                          child: const Icon(Icons.mic, color: Colors.white),
+                          child: const Icon(Icons.multitrack_audio_sharp, color: Colors.white),
                         ),
                       ],
                     ),
