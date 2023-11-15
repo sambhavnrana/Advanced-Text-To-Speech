@@ -1,5 +1,7 @@
 # Text-to-Speech rules
 
-Create your separate branch, which should be clearly specifying what feature you are working on.
+To run locally, clone the repo into your machiene and run 
+flutter pub get
 
- Kindly don't use the  same branch for other features.
+then connect a mobile device and run
+flutter run
